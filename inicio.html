@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inicio</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<!-- Barra de navegacion -->
+	<nav class="navbar"> <!-- Barra de navegacion -->
+		<ul class="main-nav">
+		<li class="button"><a href="inicio.html">Inicio</li>
+	      <li class="button"><a href="nosotros.html">Quienes somos?</li>
+	      <li class="button"><a href="programas.html">Programas </li>
+	      <li class="button"><a href="actividades.html">Actividades y Donaciones</li>
+	      <li class =" button"><a href="contacto.html">Contacto</a></li>
+	      	<div class="sm push">
+	      		<a href="https://www.facebook.com/SOCIEDAD-DE-ESPOSAS-DE-Activida-DE-PANAMA-98717799643" target="_blank" class="icon fb">
+	      		<div class="tooltip">Facebook</div>
+	      		<span><i class="fab fa-facebook-f"></i></span>
+	      		</div>
+	      	</div>
+	      	<div class="sm blhac">
+	      		<a href="https://www.instagram.com/seb.panama/" target="_blank"class="icon ig">
+	      		<div class="tooltip">Instagram</div>
+	      		<span><i class="fab fa-instagram"></i></span>
+	      		</a>
+	      	</div>
+		</ul>
+	</nav> 
+<!-- Fin barra de navegacion -->
+
+</head>
+<body>
+
+<!-- Inicio Centro de la pagina -->
+  <div class="container">
+    	<img class="logo" src="./img/SEB -logo.png"/>
+  </div>
+<!--Terminacion centro de la pagina -->
+<!-- Inicio Seccion de imagenes-->
+  <div class="slideshow-container box">
+  	<div class="mySlides fade">
+  		<div class="numbertext"> 1 / 4 </div>
+  		<img src="img/foto1.jpeg" style="width: 100%;">
+  		<div class="text">Donacion de Fondos por la ABP</div> 
+  	</div>
+  	<div class="mySlides fade"> 
+  		<div class="numbertext"> 2 / 4 </div>
+  		<img src="img/foto2.jpeg" style="width: 100%;">
+  		<div class="text">Fundacion Lewis-Galindo</div> 
+  	</div>
+  	<div class="mySlides fade ">
+  		<div class="numbertext"> 3 / 4 </div>
+  		<img src="img/foto3.jpeg" style="width: 100%;">
+  		<div class="text">Caption three</div> 
+  	</div>
+  	<div class="mySlides fade">
+  		<div class="numbertext"> 4 / 4 </div>
+  		<img src="img/foto4.jpeg" style="width: 100%;">
+  		<div class="text">Actividad de Tombola Anual</div> 
+  	</div>
+  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  	<div style="text-align:center">
+  		<span class="dot" onclick="currentSlide(1)"></span>
+  		<span class="dot" onclick="currentSlide(2)"></span>
+  		<span class="dot" onclick="currentSlide(3)"></span>
+  		<span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+<!-- Javascript-->
+	<script type="text/javascript">
+		let slideIndex = 0;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+	  showSlides(slideIndex);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 10000);
+	}
+	</script>	
+<!--Fin Seccion de imagenes -->
+  <footer class="foot">Sociedad Esposas de Banqueros</footer>
+</body>
+</html>
