@@ -310,6 +310,11 @@ font-size: 24pt;
   margin: 0 60px;
   align-content: right;
 }
+
+h5{
+  text-align: center;
+  font-size: 32pt;
+}
 /*Contact y mapa*/
 footer{
     text-align: center ;
