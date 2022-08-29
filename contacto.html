@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Actividades realizadas</title>
+	<title>Contacto</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
 <!-- Barra de navegacion -->
-	<nav class="navbar"> <!-- Barra de navegacion -->
+	<nav class="navbar"> 
 		<ul class="main-nav">
 		<li class="button"><a href="index.html">Inicio</li>
 	      <li class="button"><a href="nosotros.html">Quienes somos?</li>
@@ -29,9 +29,41 @@
 	      		</a>
 	      	</div>
 		</ul>
-	</nav> 
+	</nav>
+<!-- Barra de navegacion -->
+<!--Contenido -->
+	<div class="contactform">
+		<form onsubmit="sendEmail(); reset(); return false;">
+			<h3>Pongase en Contacto</h3>
+			<input type="text" id="name" placeholder="Nombre y Apellido" required>
+			<input type="email" id="email" placeholder="Email" required>
+			<input type="text" id="phone" placeholder="Numero" required>
+			<textarea id="message" rows="4" placeholder="Con que se le puede asistir?"></textarea>
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+
 <!--Contenido -->
 	<div class="texto">
 	<footer class="foot">Sociedad Esposas de Banqueros</footer>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	function sendEmail(){
+			Email.send({
+			Host : "smtp.gmail.com",
+			Username : "rfreiburg26@gmail.com",
+			Password : "CijeD08#iCrLsudRefR",
+			To : 'rfreibur26@gmail.com',
+			From : document.getElementById("email").value,
+			Subject : "Contacto",
+			Body : "Name: " + document.getElementById("name").value
+			+"<br> Email: " + document.getElementById("email").value
+			+"<br> Telefono: "+ document.getElementById("phone").value
+			+"<br> Mensaje: "+ document.getElementById("message").value
+		}).then(
+		message => alert("Mensaje Enviado con Exito")
+		);
+	}
+</script>
 </body>
 </html>
