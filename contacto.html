@@ -45,7 +45,7 @@
 
 <!--Contenido -->
 	<div class="texto">
-	<footer class="foot">Sociedad Esposas de Banqueros</footer>
+	
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 	function sendEmail(){
@@ -53,17 +53,18 @@
 			Host : "smtp.gmail.com",
 			Username : "rfreiburg26@gmail.com",
 			Password : "CijeD08#iCrLsudRefR",
-			To : 'rfreibur26@gmail.com',
+			To : 'rfreibu@gmail.com',
 			From : document.getElementById("email").value,
 			Subject : "Contacto",
 			Body : "Name: " + document.getElementById("name").value
 			+"<br> Email: " + document.getElementById("email").value
-			+"<br> Telefono: "+ document.getElementById("phone").value
-			+"<br> Mensaje: "+ document.getElementById("message").value
+			+"<br> Telefono: " + document.getElementById("phone").value
+			+"<br> Mensaje: " + document.getElementById("message").value
 		}).then(
 		message => alert("Mensaje Enviado con Exito")
 		);
 	}
 </script>
+<footer class="foot">Sociedad Esposas de Banqueros</footer>
 </body>
 </html>
