@@ -259,10 +259,11 @@ h1{
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   display: flex;
   align-items:top;
   justify-content: left;
+  border:2 solid black;
 }
 form{
 
@@ -302,18 +303,23 @@ form button{
 /*Finish Ciontact box*/
 /*Contact y mapa*/
 .contacto{
-margin: 0 100px 0 60px;
-align-content: center;
+margin: 0 100px ;
+align-content: top;
+justify-content: center;
 font-size: 24pt;
 }
 .mapa{
-  margin: 0 60px;
+  margin: 0 100px;
   align-content: right;
 }
 
 h5{
   text-align: center;
   font-size: 32pt;
+}
+p3{
+font-size: 28pt;
+
 }
 /*Contact y mapa*/
 footer{
