@@ -37,9 +37,11 @@
 			<input type="hidden" name="_next" value="https://rfreibu.github.io/SEB/thanks.html" >
 			<input type="text" name="name" placeholder="Nombre y Apellido" required>
 			<input type="email" name="email" placeholder="Email" required>
-			<input type="text" ="phone" placeholder="Numero" required>
+			<input type="text" name="phone" placeholder="Numero" required>
 			<input type="hidden" name="_subject" value="Contacto">
-			<textarea id="message" rows="4" placeholder="En que se le puede asistir?"></textarea>
+			<input type="text" name="_honey" style="display:none">
+			<input type="hidden" name="_captcha" value="false">
+			<textarea name="message" rows="4" placeholder="En que se le puede asistir?"></textarea>
 			<button type="submit">Enviar</button>
 		</form>
 		<div class="contacto">
@@ -51,8 +53,19 @@
 		<div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.871605159221!2d-79.51885778478929!3d8.9839605921654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8e2b78981e3%3A0xad1f8efe3facf70a!2sGlobal%20Bank!5e0!3m2!1sen!2spa!4v1661575553481!5m2!1sen!2spa" 
 			width="600" height="600" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 	</div>
-	
 
+	
+	<script>
+		$.ajax({
+    url: "https://formsubmit.co/ajax/rfreiburg26@gmail.com",
+    method: "POST",
+    data: {
+        name: "FormSubmit",
+        message: "I'm from Devro LABS"
+    },
+    dataType: "json"
+});
+	</script>
 <!--Contenido -->
 </body>
 </html>
